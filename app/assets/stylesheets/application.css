@@ -43,3 +43,61 @@
   font-size: 14px;
   color: #555555;
 }
+
+.top-start:hover {
+  color: white;
+  background-color: black;
+}
+
+.index-header {
+  margin-top: 25px;
+  margin-left: 40px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.index-table {
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+th {
+  font-size: 14px;
+}
+
+td {
+  margin: 35px;
+  padding: 5px 5px 1px 5px;
+  font-size: 14px;
+}
+
+.index-item {
+  color: black;
+}
+
+.index-item:hover {
+  color: white;
+  background-color: black;
+}
+
+.index-new {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.index-new > div {
+  margin-bottom: 10px;
+}
+
+.new-header {
+  font-size: 14px;
+}
+
+.new-title {
+  font-size: 13px
+}
+
+.new-body {
+  font-size: 13px
+}
