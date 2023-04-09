@@ -1,3 +1,7 @@
+<div class="show-flash">
+  <%= flash[:notice] %>
+</div>
+
 <div class="index-header">
   <h1>Books</h1>
 </div>
@@ -5,21 +9,21 @@
 <div class="index-table">
   <table>
     <tr align="center">
-      <th>Title</th>
-      <th>Body</th>
+      <th class="index-main">Title</th>
+      <th class="index-main">Body</th>
     </tr>
     <% @books.each do |book| %>
       <tr align="center">
-        <td><span><%= book.title %></span></td>
-        <td><span><%= book.body %></span></td>
-        <td>
+        <td class="index-date"><span><%= book.title %></span></td>
+        <td class="index-date"><span><%= book.body %></span></td>
+        <td class="index-date">
           <%= link_to "Show", book_path(book.id), class: "index-item" %>
         </td>
-        <td>
+        <td class="index-date">
           <%= link_to "Edit", edit_book_path(book.id), class: "index-item" %>
         </td>
-        <td>
-          <%= link_to "Destroy", book_path(book.id), class: "index-item" %>
+        <td class="index-date">
+          <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?", class: "index-item" %>
         </td>
       </tr>
     <% end %>
@@ -31,18 +35,32 @@
     <h2>New book</h2>
   </div>
 
-  <%= form_with model: @book do |f| %>
-    <div class="new-title">
-      <p>Title</p>
-      <%= f.text_field :title %>
+  <% if @book.errors.any? %>
+    <div class="error">
+      <p class="error-header"><%= @book.errors.count %> errors prohibited this book from being saved:</p>
+      <ul class="error-message">
+        <% @book.errors.full_messages.each do |message| %>
+         <li claas="error-list"><%= message %></li>
+        <% end %>
+      </ul>
     </div>
-
-    <div class="new-body">
-      <p>Body</p>
-      <%= f.text_area :body %>
-    </div>
-
-      <%= f.submit 'Cleate Book' %>
-
   <% end %>
+
+  <div>
+    <%= form_with model: @book do |f| %>
+    <div>
+      <div class="new-title">
+        <p>Title</p>
+        <%= f.text_field :title %>
+      </div>
+
+      <div class="new-body">
+        <p>Body</p>
+        <%= f.text_area :body %>
+      </div>
+
+      <%= f.submit 'Cleate Book', class: 'new-create' %>
+
+    <% end %>
+  </div>
 </div>

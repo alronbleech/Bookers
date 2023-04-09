@@ -62,11 +62,11 @@
   margin-bottom: 10px;
 }
 
-th {
+.index-main {
   font-size: 14px;
 }
 
-td {
+.index-date {
   margin: 35px;
   padding: 5px 5px 1px 5px;
   font-size: 14px;
@@ -95,9 +95,153 @@ td {
 }
 
 .new-title {
-  font-size: 13px
+  width: 170px;
+  font-size: 13px;
+  margin-bottom: 5px;
 }
 
 .new-body {
+  width: 166px;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.new-create {
+  padding: 1px 6px;
+}
+
+.show-flash {
+  color: green;
+  margin-top: 30px;
+  margin-left: 65px;
   font-size: 13px
 }
+
+.show-main {
+  margin-top: 33px;
+  margin-left: 65px;
+}
+
+.show-main > p {
+  font-size: 14px;
+  margin-bottom: 27px;
+}
+
+.show-title {
+  font-weight: bold;
+}
+
+.show-body {
+  font-weight: bold;
+}
+
+.show-link {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.show-link > p {
+  display:inline-block;
+  margin-top: 5px;
+}
+
+.show-edit {
+  color: black;
+  font-size: 13px;
+}
+
+.show-edit:hover {
+  color: white;
+  background-color: black;
+}
+
+.show-back {
+  color: gray;
+  font-size: 13px;
+}
+
+.show-back:hover {
+  color: white;
+  background-color: black;
+}
+
+.show-border {
+  font-size: 13px;
+}
+
+.edit {
+  margin-top: 25px;
+  margin-left: 35px;
+}
+
+.edit-header {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.edit-title {
+  width: 170px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.edit-body {
+  width: 166px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.edit-link {
+  font-size: 14px;
+}
+
+.edit-link > p {
+  display:inline-block;
+  margin-top: 5px;
+}
+
+.edit-show {
+  color: black;
+  }
+
+.edit-show:hover {
+  color: white;
+  background-color: black;
+}
+
+.edit-back {
+  color: gray;
+}
+
+.edit-back:hover {
+  color: white;
+  background-color: black;
+}
+
+.edit-update {
+  padding: 1px 6px;
+}
+
+.error {
+  width: 450px;
+  border: solid 3px #FF0000;
+  background-color: #EEEEEE;
+}
+
+.error-header {
+  font-size: 14px;
+  color: white;
+  background-color: #CC0000;
+  padding-left: 5px;
+}
+
+.error-message {
+  margin: 33px;
+  font-size: 11px;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
