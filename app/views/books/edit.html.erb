@@ -30,7 +30,7 @@
     <div class="edit-link">
       <p><%= link_to "show", book_path(@book.id), class: "edit-show" %></p>
       <p class="edit-border">|</p>
-      <p><%= link_to "Back", books_path(@book.id), class: "edit-back" %></p>
+      <p><%= link_to "Back", books_path, class: "edit-back" %></p>
     </div>
   <% end %>
 </div>
